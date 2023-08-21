@@ -30,16 +30,15 @@ document.getElementById("currentDay").innerHTML = today;
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+
+  function save_click(clicked_id) {
+    console.log("clicked saved")
+    //get info from entry and save to Local Storage
+      
+  }
+
   
+   
 });
-hour8.addEventListener("click", addEvent);
-hour9.addEventListener("click", addEvent);
-hour10.addEventListener("click", addEvent);
-hour11.addEventListener("click", addEvent);
-hour12.addEventListener("click", addEvent);
-hour1.addEventListener("click", addEvent);
-hour2.addEventListener("click", addEvent);
-hour3.addEventListener("click", addEvent);
-hour4.addEventListener("click", addEvent);
-hour5.addEventListener("click", addEvent);
+
 // TODO: Add code to display the current date in the header of the page.
