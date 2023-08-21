@@ -1,12 +1,16 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-const date = dayjs('2019-01-25').toDate();
-document.getElementById("currentDay").innerHTML = date;
 
-$(function calendar() {
 
-}
+
+$(function () {
+console.log("hello");
+//date
+var today = dayjs();
+$('#1a').text(today.format('MMM D, YYYY'));
+document.getElementById("currentDay").innerHTML = today;
+
 
 
   // TODO: Add a listener for click events on the save button. This code should
@@ -26,5 +30,16 @@ $(function calendar() {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
+  
 });
+hour8.addEventListener("click", addEvent);
+hour9.addEventListener("click", addEvent);
+hour10.addEventListener("click", addEvent);
+hour11.addEventListener("click", addEvent);
+hour12.addEventListener("click", addEvent);
+hour1.addEventListener("click", addEvent);
+hour2.addEventListener("click", addEvent);
+hour3.addEventListener("click", addEvent);
+hour4.addEventListener("click", addEvent);
+hour5.addEventListener("click", addEvent);
+// TODO: Add code to display the current date in the header of the page.
