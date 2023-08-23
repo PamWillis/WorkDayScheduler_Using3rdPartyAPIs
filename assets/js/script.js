@@ -5,14 +5,14 @@
 
 
 $(function () {
-  console.log("hello");
+console.log("hello");
   //date
 
   var today = dayjs();
-  $('#1a').text(today.format('MMM D, YYYY'));
-  var reformatDate = today.format('dddd, MMMM D YYYY, h:mm a');
-  
-  $('#3a').text(reformatDate);
+  $('lead').text(today.format('MMM D, YYYY'));
+    var reformatDate = today.format('dddd, MMMM D YYYY, h:mm a');
+
+  $('lead').text(reformatDate);
   document.getElementById("currentDay").innerHTML = reformatDate;
 
 
@@ -40,7 +40,7 @@ $(function () {
 function labelTime() {
   // get the current hour
   var currentHour = dayjs().hour();
-  $(hour.format(h))
+// $(hour.format(h))
   console.log(currentHour);
 
   // loop over time blocks
