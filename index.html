@@ -31,63 +31,63 @@
         -->
 
     <!-- Example of a past time block. The "past" class adds a gray background color. -->
-    <div id="hour-9" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-9" class="row time-block past" input type="time" min="09:00" max="9:59" required>
       <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    <div id="hour-10" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-10" class="row time-block past" input type="time" min="10:00" max="10:59" required>
       <div class="col-2 col-md-1 hour text-center py-3">10AM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    <div id="hour-11" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-11" class="row time-block past" input type="time" min="11:00" max="11:59" required>
       <div class="col-2 col-md-1 hour text-center py-3">11AM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    <div id="hour-12" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-12" class="row time-block past" input type="time" min="12:00" max="12:59" required>
       <div class="col-2 col-md-1 hour text-center py-3">12PM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    <div id="hour-1" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-1" class="row time-block past" input type="time" min="01:00" max="1:59" required>
       <div class="col-2 col-md-1 hour text-center py-3">1PM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    <div id="hour-2" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-2" class="row time-block past" input type="time" min="02:00" max="02:59" required>
       <div class="col-2 col-md-1 hour text-center py-3">2PM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    <div id="hour-3" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-3" class="row time-block past"input type="time" min="03:00" max="03:59" required>
       <div class="col-2 col-md-1 hour text-center py-3">3PM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    <div id="hour-4" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-4" class="row time-block past" input type="time" min="04:00" max="05:00" required>
       <div class="col-2 col-md-1 hour text-center py-3">4PM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
     </div>
-    <div id="hour-5" onClick="save_click(this.id)" class="row time-block past">
+    <div id="hour-5" class="row time-block past">
       <div class="col-2 col-md-1 hour text-center py-3">5PM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
@@ -95,27 +95,33 @@
       </button>
     </div>
 
-    <!-- Example of a a present time block. The "present" class adds a red background color. -->
+    <!-- Example of a a present time block. The "present" class adds a red background color.
     <div id="hour-10" class="row time-block present">
       <div class="col-2 col-md-1 hour text-center py-3">10AM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </div> -->
 
     <!-- Example of a future time block. The "future" class adds a green background color. -->
-    <div id="hour-11" class="row time-block future">
+    <!-- <div id="hour-11" class="row time-block future">
       <div class="col-2 col-md-1 hour text-center py-3">11AM</div>
       <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
       <button class="btn saveBtn col-2 col-md-1" aria-label="save">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
-    <script src="./assets/js/script.js"></script>
+    </div> -->
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
       integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+
+<script>
+  dayjs.locale('de') // use locale globally
+  dayjs().locale('de').format() // use locale in a specific instance
+</script>
 
 
 </body>
