@@ -37,17 +37,28 @@ $(function () {
 
 });
 
-var currentTime 
-console.log(currentTime);
 function labelTime() {
-  //assign time slot to each id
-  //compare time slot to current time
-  if (currentTime = input) {
-    classList.add("present")
-  }
-  else {
-    console.log("ignore")
-  }
+  // get the current hour
+  var currentHour = dayjs().hour();
+  $(hour.format(h))
+  console.log(currentHour);
+
+  // loop over time blocks
+  $('.time-block').each(function () {
+  // use $(this) selector to target the current .time-block element, get it's id value, then just take the part after the dash -
+      var blockHour = parseInt($(this).attr('id').split('-')[1]);
+
+      console.log(blockHour);
+      // use conditionals to determind which style to apply
+
+      if (blockHour < currentHour) {
+          // use $(this) selector to apply/remove the necessary class(es) for this condition
+      } else if (blockHour === currentHour) {
+              // use $(this) selector to apply/remove the necessary class(es) for this condition
+      } else {
+          // use $(this) selector to apply/remove the necessary class(es) for this condition
+      }
+  });
 }
 
 function save_click() {
@@ -63,11 +74,11 @@ this.parent.document.getElementById("hour-9").addEventListener("click", save_cli
 this.parent.document.getElementById("hour-10").addEventListener("click", save_click)
 this.parent.document.getElementById("hour-11").addEventListener("click", save_click)
 this.parent.document.getElementById("hour-12").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-1").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-2").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-3").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-4").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-5").addEventListener("click", save_click)
+this.parent.document.getElementById("hour-13").addEventListener("click", save_click)
+this.parent.document.getElementById("hour-14").addEventListener("click", save_click)
+this.parent.document.getElementById("hour-15").addEventListener("click", save_click)
+this.parent.document.getElementById("hour-16").addEventListener("click", save_click)
+this.parent.document.getElementById("hour-17").addEventListener("click", save_click)
 
 // TODO: Add code to display the current date in the header of the page.
 
