@@ -38,11 +38,11 @@ $(function () { //wrapped code
 $(document).ready(function () {
   $('.saveBtn').on('click', function() {
     //get the value of the text
-    var value = $(this).siblings('description').val();
+    var value = $(this).siblings('text-center').val();
     //the time of the div class
     var time = $(this).parent().attr('id');
     //save in local storage 
-  localStorage.setItem("time", "value");
+  localStorage.setItem(time, value);
 });
   //Show the notification and remove after 5 sec.
   $('.notification').addClass('show');
