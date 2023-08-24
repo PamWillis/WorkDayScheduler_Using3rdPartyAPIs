@@ -1,5 +1,8 @@
 
 $(function () { //wrapped code
+  //load storage at refresh
+  localStorage.getItem(time, value);
+
   console.log("hello");
 
   // date and time to top of page
@@ -38,7 +41,7 @@ $(function () { //wrapped code
 $(document).ready(function () {
   $('.saveBtn').on('click', function() {
     //get the value of the text
-    var value = $(this).siblings('text-center').val();
+    var value = $(this).siblings('.description').val();
     //the time of the div class
     var time = $(this).parent().attr('id');
     //save in local storage 
