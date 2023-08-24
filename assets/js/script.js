@@ -1,23 +1,48 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
+$(function () { //wrapped code
+  console.log("hello");
 
-
-$(function () {
-console.log("hello");
-  //date
-
+  // date and time to top of page
   var today = dayjs();
   $('lead').text(today.format('MMM D, YYYY'));
-    var reformatDate = today.format('dddd, MMMM D YYYY, h:mm a');
+  var reformatDate = today.format('dddd, MMMM D YYYY, h:mm a');
 
   $('lead').text(reformatDate);
   document.getElementById("currentDay").innerHTML = reformatDate;
+  console.log(reformatDate)
 
+  function hourUpdater() {
+    var currentHour = dayjs().hour();
+    console.log("this " + currentHour)
+  }
+  hourUpdater();
+    //to check if current time needs updated.
+  
+    setInterval(hourUpdater, 15000);
+    //looping to split time off the end
+    
 
+  $('time-block').each(function () {
+    var blockHour = parseInt($(this).attr('id').split('-')[1]);
+    // check for past present or future add to class
+  
+    if (blockHour < currentHour) {
+      $(this).addClass('past');
 
-
+    }
+    else if (blockHour === currentHour) {
+      $(this).removeClass('past');
+      $(this).addClass('present');
+    }
+    else {
+      $(this).removeClass('past');
+      $(this).removeClass('present');
+      $(this).addClass('future');
+    }
+  
+  });
+  
+  
 
 
   // TODO: Add code to apply the past, present, or future class to each time
@@ -31,44 +56,33 @@ console.log("hello");
   // attribute of each time-block be used to do this?
   //
 
+  //   // loop over time blocks
+  //   $('.time-block').each(function () {
+  //   // use $(this) selector to target the current .time-block element, get it's id value, then just take the part after the dash -
+  //       var blockHour = parseInt($(this).attr('id').split('-')[1]);
+
+  //       console.log(blockHour);
+  //       // use conditionals to determind which style to apply
+
+  //       if (blockHour < currentHour) {
+  //           // use $(this) selector to apply/remove the necessary class(es) for this condition
+  //       } else if (blockHour === currentHour) {
+  //               // use $(this) selector to apply/remove the necessary class(es) for this condition
+  //       } else {
+  //           // use $(this) selector to apply/remove the necessary class(es) for this condition
+  //       }
+  //   });
+  // }
 
 
-
-
+  //get info from entry and save to Local Storage
 });
-
-function labelTime() {
-  // get the current hour
-  var currentHour = dayjs().hour();
-// $(hour.format(h))
-  console.log(currentHour);
-
-  // loop over time blocks
-  $('.time-block').each(function () {
-  // use $(this) selector to target the current .time-block element, get it's id value, then just take the part after the dash -
-      var blockHour = parseInt($(this).attr('id').split('-')[1]);
-
-      console.log(blockHour);
-      // use conditionals to determind which style to apply
-
-      if (blockHour < currentHour) {
-          // use $(this) selector to apply/remove the necessary class(es) for this condition
-      } else if (blockHour === currentHour) {
-              // use $(this) selector to apply/remove the necessary class(es) for this condition
-      } else {
-          // use $(this) selector to apply/remove the necessary class(es) for this condition
-      }
-  });
-}
-
 function save_click() {
-
-  //add past present or future to class (ex.  xxxxxx.classList.add("past");)
+//enter info for appt to localStorag
 
   console.log("test")
 }
 
-//get info from entry and save to Local Storage
 
 this.parent.document.getElementById("hour-9").addEventListener("click", save_click)
 this.parent.document.getElementById("hour-10").addEventListener("click", save_click)
