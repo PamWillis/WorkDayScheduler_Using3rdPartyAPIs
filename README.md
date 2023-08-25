@@ -9,9 +9,9 @@ The work day schedular is used to save a schedule of your 8hr day. Hours are den
 The date and time can be found across the top this is synced with day.js and is linked to the id #currentDay located in the header. to show your local date and time. You are welcome to enter items in the red or green bars. These denote present and future times. Click to save your item with the button on the right.
 
 ## Deployment and GitHub
+ deployment: https://pamwillis.github.io/WorkDayScheduler_Using3rdPartyAPIs/
 
-
-
+Github repository: https://github.com/PamWillis/WorkDayScheduler_Using3rdPartyAPIs.git
 
 ## License
 
