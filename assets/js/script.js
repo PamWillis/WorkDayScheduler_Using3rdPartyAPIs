@@ -1,7 +1,7 @@
 
 $(function () { //wrapped code
-  //load storage at refresh
-  localStorage.getItem(time, value);
+
+ 
 
   console.log("hello");
 
@@ -44,8 +44,8 @@ $(document).ready(function () {
     var value = $(this).siblings('.description').val();
     //the time of the div class
     var time = $(this).parent().attr('id');
-    //save in local storage 
-  localStorage.setItem(time, value);
+    //save in local storage and saves session for refresh
+  sessionStorage.setItem(time, value);
 });
   //Show the notification and remove after 5 sec.
   $('.notification').addClass('show');
@@ -60,19 +60,6 @@ $(document).ready(function () {
   setInterval(hourUpdater, 15000);
 
 });
-
-
-
-this.parent.document.getElementById("hour-9").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-10").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-11").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-12").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-13").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-14").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-15").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-16").addEventListener("click", save_click)
-this.parent.document.getElementById("hour-17").addEventListener("click", save_click)
-
 
 
 // TODO: Add code to display the current date in the header of the page.
