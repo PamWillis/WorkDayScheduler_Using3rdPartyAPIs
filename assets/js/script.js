@@ -46,13 +46,13 @@ $(function () { //wrapped code
       var time = $(this).parent().attr('id');
       //save in local storage and saves session for refresh
       localStorage.setItem(time, value);
-      //Show the notification and remove after 5 sec. at the top of the page
-      $('.notification').addClass('.show'); {
-      }
-      // hides notification
-      setTimeout(function () {
-        $('.notification').removeClass('.show');
+      
+      document.getElementsById("alert").innerHTML = "Appointment added to local storage &#9989";
+      setTimeout(() => {
+        console.log("5sec")
       }, 5000);
+      document.getElementsById("alert").innerHTML = "";
+      
 
     });
 
