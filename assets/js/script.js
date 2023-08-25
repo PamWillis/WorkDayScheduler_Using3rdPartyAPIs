@@ -1,7 +1,7 @@
 
 $(function () { //wrapped code
-  
- 
+
+
 
   console.log("hello");
 
@@ -36,27 +36,27 @@ $(function () { //wrapped code
       }
     });
   };
-  
+
   //get info from entry and save to Local Storage
-$(document).ready(function () {
-  $('.saveBtn').on('click', function() {
-    //get the value of the text
-    var value = $(this).siblings('.description').val();
-    //the time of the div class
-    var time = $(this).parent().attr('id');
-    //save in local storage and saves session for refresh
-  sessionStorage.setItem(time, value);
-});
-  //Show the notification and remove after 5 sec.
-  $('.notification').addClass('show'); {
-    
-  }
-  setTimeout(function () {
-    $('.notification').removeClass('show');
+  $(document).ready(function () {
+    $('.saveBtn').on('click', function () {
+      //get the value of the text
+      var value = $(this).siblings('.description').val();
+      //the time of the div class
+      var time = $(this).parent().attr('id');
+      //save in local storage and saves session for refresh
+      localStorage.setItem(time, value);
+      //Show the notification and remove after 5 sec. at the top of the page
+      $('.notification').addClass('.show'); {
+      }
+      // hides notification
+      setTimeout(function () {
+        $('.notification').removeClass('.show');
+      }, 5000);
 
-  }, 5000);
+    });
 
-});
+  });
   hourUpdater();
 
   setInterval(hourUpdater, 15000);

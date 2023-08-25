@@ -57,14 +57,10 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
-.notification {
-  display: flex;
-text-align: center;
-}
-.hide {
-  display: none;
-}
+
 .show {
-  display: flex;
+  display: block;
+  text-align: center;
+  content: "Appointment added to local storage &#9989";
 }
 
