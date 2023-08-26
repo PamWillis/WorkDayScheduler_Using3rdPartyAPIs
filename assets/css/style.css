@@ -62,5 +62,9 @@ textarea {
 .hide {
   display: none;
 }
+.show {
+  display: block;
+  text-align: center;
+}
 
 

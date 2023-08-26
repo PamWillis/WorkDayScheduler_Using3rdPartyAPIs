@@ -1,6 +1,6 @@
 
 $(function () { //wrapped code
-
+  // localStorage.getItem(time, value);
 
 
   console.log("hello");
@@ -16,6 +16,8 @@ $(function () { //wrapped code
 
   function hourUpdater() {
     var currentHour = dayjs().hour();
+    // line 20 to adjust time to test
+    currentHour = currentHour - 10;
     console.log("this " + currentHour)
     $('.time-block').each(function () {
       var blockHour = parseInt($(this).attr('id').split('-')[1]);
@@ -38,27 +40,32 @@ $(function () { //wrapped code
   };
 
   //get info from entry and save to Local Storage
-  $(document).ready(function () {
-    $('.saveBtn').on('click', function () {
-      //get the value of the text
-      var value = $(this).siblings('.description').val();
-      //the time of the div class
-      var time = $(this).parent().attr('id');
-      //save in local storage and saves session for refresh
-      localStorage.setItem(time, value);
-      
-      document.getElementsById("alert").innerHTML = "Appointment added to local storage &#9989";
-      setTimeout(() => {
-        console.log("5sec")
-      }, 5000);
-      document.getElementsById("alert").innerHTML = "";
-      
+  // const saveData = () => {
+  $('.saveBtn').on('click', function () {
+    //the time of the div class
+    let time = $(this).parent().attr('id');
+    //get the value of the text
+    let value = $(this).siblings('.description').val();
 
-    });
-
+    //save in local storage and saves session for refresh
+    localStorage.setItem("time", "value");
+    console.log(value);
+    notification();
   });
+
+  const notification = () => {
+    $(".notification").removeClass("hide");
+    $(".notification").addClass("show");
+    setTimeout(() => {
+      $(".notification").removeClass("show");
+      $(".notification").addClass("hide");
+    }, 5000);
+
+  };
+
+  // };
   hourUpdater();
 
   setInterval(hourUpdater, 15000);
-
 });
+
